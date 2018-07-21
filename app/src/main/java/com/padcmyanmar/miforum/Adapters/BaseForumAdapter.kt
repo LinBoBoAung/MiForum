@@ -42,9 +42,9 @@ open class BaseForumAdapter<T, W>(context: Context) : RecyclerView.Adapter<BaseF
         notifyDataSetChanged()
     }
 
-
-    fun clearData() {
-        mData = java.util.ArrayList()
-        notifyDataSetChanged()
-    }
+//
+//    fun clearData() {
+//        mData = java.util.ArrayList()
+//        notifyDataSetChanged()
+//    }
 }

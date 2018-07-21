@@ -47,7 +47,7 @@ class MainActivity : BaseActivity(), HealthCareDelegate {
 
         mForumAdapter = ForumAdapter(applicationContext, this)
         rv_feed.adapter = mForumAdapter
-      //  SwipeRefreshLayout.isRefreshing = true
+      SwipeRefreshLayout.isRefreshing = true
         HealthCareModel.getInstance().loadHealthCareInfo()
 
 //
@@ -59,6 +59,13 @@ class MainActivity : BaseActivity(), HealthCareDelegate {
 //            HealthCareModel.getInstance().loadHealthCareInfo()
 //        }//TODO try to clean after testing
 //
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onNewsLoadedEvent(newsLoadedEvent: DataEvent.HealthCareLoadedEvent) {
+        SwipeRefreshLayout.isRefreshing = false
+        mForumAdapter!!.appendNewData(newsLoadedEvent.loadHealthEventInfo as MutableList<HealthCareInfoVO>)
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

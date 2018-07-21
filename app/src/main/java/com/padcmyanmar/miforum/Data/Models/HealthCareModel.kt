@@ -26,9 +26,9 @@ class HealthCareModel {
         EventBus.getDefault().register(this)
     }
 
-    private var mHealthCareData: HashMap<Int, HealthCareInfoVO> = HashMap()
+    private var mHealthCareData: HashMap<Int, HealthCareInfoVO> = HashMap()//Data Respository in Model,persitent Layerထဲ ထညါ့္ဖို့
 
-    fun loadHealthCareInfo() {
+    fun  loadHealthCareInfo() {
         HealthCareDataAgent.getInstance().loadHealthCareInfo(Constants.ACCESS_TOKEN)
     }
 

@@ -3,103 +3,101 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <android.support.constraint.ConstraintLayout
+
+    <RelativeLayout
+        android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:background="@android:color/white">
 
-        <RelativeLayout
-            android:id="@+id/relative"
+        <TextView
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="Make A Review of AI Powered MIUI 10! WIn Redmi Note5 ,Mijia Sports Watch,MIUI10 T-Shirts and More!"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:id="@+id/iv_review"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/reviewcontest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_review"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="match_parent"
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Make A Review of AI Powered MIUI 10! WIn Redmi Note5 ,Mijia Sports Watch,MIUI10 T-Shirts and More!"
+                android:text="rahul_09"
                 android:textAllCaps="false"
-              />
+                android:textColor="	#A9A9A9" />
+
 
             <ImageView
-                android:id="@+id/iv_review"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_below="@+id/tv_title"
-                android:layout_marginTop="16dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/reviewcontest" />
+                android:id="@+id/iv_record"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/record" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv_record"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/iv_review"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:layout_marginLeft="6dp"
+                android:text="13995"
+                android:textColor="	#A9A9A9" />
 
-                <TextView
-                    android:id="@+id/tv_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="rahul_09"
-                    android:textAllCaps="false"
-                    android:textColor="	#A9A9A9" />
-
-
-                <ImageView
-                    android:id="@+id/iv_record"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/record" />
-
-                <TextView
-                    android:id="@+id/tv_record"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="6dp"
-                    android:text="13995"
-                    android:textColor="	#A9A9A9" />
-
-                <ImageView
-                    android:id="@+id/iv_comment"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/comment" />
+            <ImageView
+                android:id="@+id/iv_comment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/comment" />
 
 
-                <TextView
-                    android:id="@+id/tv_comment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="6dp"
-                    android:text="627"
-                    android:textColor="	#A9A9A9" />
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="627"
+                android:textColor="	#A9A9A9" />
 
-                <ImageView
-                    android:id="@+id/iv_like"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/like" />
-
-
-                <TextView
-                    android:id="@+id/tv_like"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="6dp"
-                    android:text="440"
-                    android:textColor="	#A9A9A9" />
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/like" />
 
 
-            </LinearLayout>
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="440"
+                android:textColor="	#A9A9A9" />
 
-    </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </android.support.v7.widget.CardView>
